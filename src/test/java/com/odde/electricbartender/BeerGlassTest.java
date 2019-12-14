@@ -11,4 +11,11 @@ public class BeerGlassTest {
         assertNotNull( beerGlass );
     }
 
+    @Test
+    public void a_beer_glass_holds_300ml() {
+        BeerGlass beerGlass = new BeerGlass();
+        assertEquals(300.0, beerGlass.getTotalCapacityInMilliters());
+    }
+
+
 }
