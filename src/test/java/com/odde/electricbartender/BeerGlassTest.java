@@ -7,7 +7,7 @@ import static org.junit.Assert.assertNotNull;
 
 public class BeerGlassTest {
     @Test
-    public void a_beer_class_can_be_created() {
+    public void a_beer_glass_can_be_created() {
         BeerGlass beerGlass = new BeerGlass();
         assertNotNull( beerGlass );
     }
