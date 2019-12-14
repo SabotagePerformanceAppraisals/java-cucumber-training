@@ -1,9 +1,13 @@
 package cucumber.stepdefs;
 
+import com.odde.electricbartender.BeerGlass;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.driver.WebDriverWrapper;
 import cucumber.site.GildedRoseSite;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class StepDefs {
@@ -20,4 +24,11 @@ public class StepDefs {
         driver.pageShouldContain("inventory");
 
     }
+
+    @Given("Our bar uses {int}ml glasses")
+    public void our_bar_uses_ml_glasses(int int1) {
+        BeerGlass beerGlass = new BeerGlass();
+        assertEquals(int1, beerGlass.getTotalCapacityInMilliters());
+    }
+
 }
