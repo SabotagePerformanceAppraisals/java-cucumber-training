@@ -3,7 +3,7 @@ package cucumber.site;
 import cucumber.driver.WebDriverFactory;
 import cucumber.driver.WebDriverWrapper;
 
-public class GildedRoseSite {
+public class ElectricBartenderSite {
     public final WebDriverWrapper driver = WebDriverFactory.getDefaultDriver();
 
     public String baseUrl() {

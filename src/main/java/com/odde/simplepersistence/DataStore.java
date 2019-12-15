@@ -1,10 +1,13 @@
-package com.gildedrose;
+package com.odde.simplepersistence;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Emerson developed this, and MJ stole it, to support toy applications for training purposes.
+ */
 public final class DataStore {
     private static DataStore dataStoreInstance;
     private static HashMap<String, Object> dataObjects;
@@ -12,9 +15,9 @@ public final class DataStore {
 
     private DataStore(){
     }
-   public static DataStore getDataStoreInstance(Boolean resetData){
-       return getDataStore(resetData);
-   }
+    public static DataStore getDataStoreInstance(Boolean resetData){
+        return getDataStore(resetData);
+    }
     public static DataStore getDataStoreInstance(){
         return getDataStore(false);
     }

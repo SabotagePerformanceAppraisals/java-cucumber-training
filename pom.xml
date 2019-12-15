@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>gilded_rose_cucumber</groupId>
-    <artifactId>gilded_rose_cucumber</artifactId>
+    <groupId>electric_bartender_cucumber</groupId>
+    <artifactId>electric_bartender_cucumber</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <parent>
