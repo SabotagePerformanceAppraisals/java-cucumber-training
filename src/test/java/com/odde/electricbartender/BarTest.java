@@ -37,7 +37,7 @@ public class BarTest {
 
     @Test
     public void we_can_take_a_beer_glass() {
-        BeerGlass beerGlass = bar.takeABeerGlass();
+        BeerGlass beerGlass = bar.takeAGlassOfBeer();
         assertNotNull(beerGlass);
     }
 

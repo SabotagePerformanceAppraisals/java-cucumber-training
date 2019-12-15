@@ -37,7 +37,7 @@ public class StepDefs {
     @When("guest orders {int} glasses of ale")
     public void guest_orders_x_glasses_of_ale(int x) {
         for (int ii = 1; ii < x; ii++) {
-            BeerGlass beerGlass = bar.takeABeerGlass();
+            BeerGlass beerGlass = bar.takeAGlassOfBeer();
             assertNotNull(beerGlass);
         }
     }

@@ -3,8 +3,7 @@ Feature: Electric bartender can work the beer kegs
   Background:
     Given Our bar uses 50 liter kegs
     And Our bar uses 300ml beer glasses
-
-  @developing
+    
   Scenario: Guest wants an ale
     Given the bar has a full keg of ale
     When guest orders an ale

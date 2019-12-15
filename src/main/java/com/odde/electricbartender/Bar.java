@@ -28,7 +28,9 @@ public class Bar {
         System.out.println("Dishes are clean.");
     }
 
-    public BeerGlass takeABeerGlass() {
-        return beerGlasses.remove(beerGlasses.size()-1);
+    public BeerGlass takeAGlassOfBeer() {
+        BeerGlass beerGlass = beerGlasses.remove(beerGlasses.size() - 1);
+        aleKeg.fillMyGlass(beerGlass);
+        return beerGlass;
     }
 }
