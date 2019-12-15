@@ -12,7 +12,7 @@ Feature: Electric bartender can work the beer kegs
 
   Scenario Outline: Bar tracks ale inventory reduction
     Given the bar has a full keg of ale
-    When guest orders <number> of glasses of ale
+    When guest orders <number> glasses of ale
     Then keg will have <remaining> liters left
 
     Examples:

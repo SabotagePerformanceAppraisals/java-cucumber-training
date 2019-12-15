@@ -4,8 +4,10 @@ import com.odde.electricbartender.AleKeg;
 import com.odde.electricbartender.Bar;
 import com.odde.electricbartender.BeerGlass;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 
 public class StepDefs {
@@ -20,10 +22,24 @@ public class StepDefs {
         assertEquals(expectedKegCapacityInMilliliters, actualKegCapacity);
     }
 
+    @Given("the bar has a full keg of ale")
+    public void the_bar_has_a_full_keg_of_ale() {
+        bar.restockAle();
+    }
+
+
     @Given("Our bar uses {int}ml beer glasses")
     public void our_bar_uses_x_ml_beer_glasses(int x) {
         BeerGlass beerGlass = new BeerGlass();
         assertEquals(x, beerGlass.getTotalCapacityInMilliters());
+    }
+
+    @When("guest orders {int} glasses of ale")
+    public void guest_orders_x_glasses_of_ale(int x) {
+        for (int ii = 1; ii < x; ii++) {
+            BeerGlass beerGlass = bar.takeABeerGlass();
+            assertNotNull(beerGlass);
+        }
     }
 
 }

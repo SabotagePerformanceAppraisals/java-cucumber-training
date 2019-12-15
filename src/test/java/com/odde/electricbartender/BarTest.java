@@ -10,7 +10,7 @@ public class BarTest {
     private Bar bar;
 
     @BeforeEach
-    public void setup() {
+    public void setUp() {
        bar = new Bar();
     }
 
