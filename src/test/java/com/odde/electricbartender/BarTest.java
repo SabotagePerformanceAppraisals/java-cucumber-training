@@ -5,10 +5,11 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BarTest {
-    @Test
-    public void a_bar_can_be_created() {
-        Bar bar = new Bar();
-        assertNotNull(bar);
-    }
 
+    @Test
+    public void bar_has_a_keg_of_ale() {
+        Bar bar= new Bar();
+        AleKeg aleKeg = bar.getAleKeg();
+        assertNotNull(aleKeg);
+    }
 }
