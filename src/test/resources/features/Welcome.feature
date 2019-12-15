@@ -1,6 +1,6 @@
-Feature: Welcome scenarios for the top page
-
-  Scenario: The user is welcomed with warm greeting from the owner
-    Given a customer is not logged in
-    When when they access the welcome page
-    Then they see welcome message from Kahjeet the owner
+#Feature: Welcome scenarios for the top page
+#  @developing
+#  Scenario: The user is welcomed with warm greeting from the owner
+#    Given a customer is not logged in
+#    When when they access the welcome page
+#    Then they see welcome message from Kahjeet the owner
