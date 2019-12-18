@@ -5,8 +5,17 @@ package com.odde.electricbartender;
  */
 public class BeerGlass {
     private final static int TOTAL_CAPACITY_IN_MILLITERS = 300;
+    private int remainingBeer = 0;
 
     public int getTotalCapacityInMilliters() {
         return TOTAL_CAPACITY_IN_MILLITERS;
+    }
+
+    public int getRemainingBeerInMilliliters() {
+        return remainingBeer;
+    }
+
+    public void fill(int amount) {
+        remainingBeer = amount;
     }
 }

@@ -9,7 +9,9 @@ public class BeerKeg {
     }
 
     public void fillMyGlass(BeerGlass beerGlass) {
-        remaining_beer_in_milliliters -= beerGlass.getTotalCapacityInMilliters();
+        int amountToPour = beerGlass.getTotalCapacityInMilliters();
+        beerGlass.fill(amountToPour);
+        remaining_beer_in_milliliters -= amountToPour;
     }
 
     public int remainingBeerInMilliliters() {
