@@ -23,7 +23,7 @@ public class StepDefs {
         assertEquals(expectedKegCapacityInMilliliters, actualKegCapacity);
     }
 
-    @Given("the bar has a full keg of ale")  // incorrect translation バーテンダーは満タンの樽を持っている
+    @Given("the bar has a full keg of ale")
     public void the_bar_has_a_full_keg_of_ale() {
         bar.restockAle();
     }
@@ -44,7 +44,6 @@ public class StepDefs {
     @When("ゲストがエールををオーダーする")
     public void guest_orders_an_ale() {
         beerGlass = bar.takeAGlassOfBeer();
-        System.out.println("remaining beer = " +bar.getAleKeg().remainingBeerInMilliliters());
     }
 
     @Then("バーテンダーはエールを提供する")
