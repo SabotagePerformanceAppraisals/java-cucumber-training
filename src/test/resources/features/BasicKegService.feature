@@ -13,8 +13,8 @@ Feature: 電子バーテンダーはビールの操作を可能である
     Given the bar has a full keg of ale
     When ゲストがエールををオーダーする
      #When guest orders an ale
-    #Then バーテンダーはエールを提供する
-     Then bartender will serve an ale
+    Then バーテンダーはエールを提供する
+     #Then bartender will serve an ale
 
 
   Scenario Outline: バーはエールの在庫を減らす為に管理する
@@ -23,8 +23,8 @@ Feature: 電子バーテンダーはビールの操作を可能である
     Given the bar has a full keg of ale
     When お客様が <number> 杯のエールを注文する
      #When guest orders <number> glasses of ale
-    #Then 樽には <remaining> リットルが残っている
-     Then keg will have <remaining> liters left
+    Then 樽には <remaining> リットルが残っている
+     #Then keg will have <remaining> liters left
      Examples:
     #| 数  | 残り |
        | number  | remaining |
