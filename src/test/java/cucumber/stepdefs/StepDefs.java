@@ -44,8 +44,8 @@ public class StepDefs {
         beerGlass = bar.takeAGlassOfBeer();
     }
 
-    @Then("バーテンダーはエールを提供する")
-    public void bartender_will_serve_an_ale() {
+    @Then("ゲストのビールグラスにエールが満タンになる")
+    public void ゲストのビールグラスにエールが満タンになる() {
         assertNotEquals(0, beerGlass.getRemainingBeerInMilliliters());
     }
 
@@ -55,5 +55,4 @@ public class StepDefs {
         AleKeg keg = bar.getAleKeg();
         assertEquals(expectedBeerRemainingInMilliliters, keg.remainingBeerInMilliliters());
     }
-
 }

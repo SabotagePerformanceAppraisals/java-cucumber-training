@@ -9,11 +9,11 @@ Feature: 電子バーテンダーはビールの操作を可能である
   #Scenario: Guest wants an ale
     #Given the bar has a full keg of ale
     #When guest orders an ale
-    #Then bartender will serve an ale
+    #Then guest's beer glass has full ale
   Scenario: ゲストはエールを飲みたがっている
     Given バーにエールが満タンの樽がある
     When ゲストがエールををオーダーする
-    Then バーテンダーはエールを提供する
+    Then ゲストのビールグラスにエールが満タンになる
 
   #Scenario Outline: Bar tracks ale inventory reduction
    #Given the bar has a full keg of ale
