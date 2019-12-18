@@ -1,10 +1,11 @@
 Feature: 電子バーテンダーはビールの操作を可能である
 #Feature: Electric bartender can work the beer kegs
    Background:
+      # Given Our bar uses 50 liter kegs
+      # And Our bar uses 300ml beer glasses
 　　Given 私達のバーでは50リットルの樽を使う
-    #Given Our bar uses 50 liter kegs
 　　And 300MLのビールグラスを使う
-    #And Our bar uses 300ml beer glasses
+
 
 
 　Scenario: ゲストはエールを飲みたがっている
