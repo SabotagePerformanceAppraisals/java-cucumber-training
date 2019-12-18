@@ -21,12 +21,11 @@ Feature: 電子バーテンダーはビールの操作を可能である
   #Scenario Outline: Bar tracks ale inventory reduction
     #Given バーは満タンの樽を持っている         // incorrect translation 翻訳が間違っています
     Given the bar has a full keg of ale
-    When お客様が <number> 杯のエールを注文する
+    When お客様が <数> 杯のエールを注文する
      #When guest orders <number> glasses of ale
-    Then 樽には <remaining> リットルが残っている
+    Then 樽には <残り> リットルが残っている
      #Then keg will have <remaining> liters left
      Examples:
-    #| 数  | 残り |
-       | number  | remaining |
-       |   1 | 49.7  |
-       |   3 | 49.1  |
+      | 数  | 残り |
+      |   1 | 49.7  |
+      |   3 | 49.1  |

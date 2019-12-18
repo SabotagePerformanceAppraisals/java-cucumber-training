@@ -11,8 +11,8 @@ import static org.junit.Assert.*;
 
 
 public class StepDefs {
-    private Bar bar = new Bar();
-    private BeerGlass beerGlass = new BeerGlass();
+    private static Bar bar = new Bar();
+    private static BeerGlass beerGlass = new BeerGlass();
 
     @Given("私達のバーでは{int}リットルの樽を使う")  // @Given("Our bar uses {int} liter kegs")
     public void our_bar_uses_x_liter_kegs(int x) {
@@ -36,7 +36,7 @@ public class StepDefs {
 
     @When("お客様が {int} 杯のエールを注文する")
     public void guest_orders_x_glasses_of_ale(int x) {
-        for (int ii = 1; ii < x; ii++) {
+        for (int ii = 0; ii < x; ii++) {
             guest_orders_an_ale();
         }
     }
@@ -44,11 +44,20 @@ public class StepDefs {
     @When("ゲストがエールををオーダーする")
     public void guest_orders_an_ale() {
         beerGlass = bar.takeAGlassOfBeer();
+        System.out.println("remaining beer = " +bar.getAleKeg().remainingBeerInMilliliters());
     }
 
     @Then("バーテンダーはエールを提供する")
     public void bartender_will_serve_an_ale() {
         assertNotEquals(0, beerGlass.getRemainingBeerInMilliliters());
     }
+
+    @Then("樽には {double} リットルが残っている")
+    public void 樽には_リットルが残っている(Double x) {
+        int expectedBeerRemainingInMilliliters = (int) (x * 1000);
+        AleKeg keg = bar.getAleKeg();
+        assertEquals(expectedBeerRemainingInMilliliters, keg.remainingBeerInMilliliters());
+    }
+
 
 }
