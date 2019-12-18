@@ -7,7 +7,7 @@ public class BeerGlass {
     private final static int TOTAL_CAPACITY_IN_MILLITERS = 300;
     private int remainingBeer = 0;
 
-    public int getTotalCapacityInMilliters() {
+    public static int getTotalCapacityInMilliters() {
         return TOTAL_CAPACITY_IN_MILLITERS;
     }
 

@@ -4,14 +4,15 @@ import com.odde.electricbartender.AleKeg;
 import com.odde.electricbartender.Bar;
 import com.odde.electricbartender.BeerGlass;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 
 public class StepDefs {
     private Bar bar = new Bar();
+    private BeerGlass beerGlass = new BeerGlass();
 
     @Given("私達のバーでは{int}リットルの樽を使う")  // @Given("Our bar uses {int} liter kegs")
     public void our_bar_uses_x_liter_kegs(int x) {
@@ -30,7 +31,6 @@ public class StepDefs {
 
     @Given("{int}MLのビールグラスを使う")  // @Given("Our bar uses {int}ml beer glasses")
     public void our_bar_uses_x_ml_beer_glasses(int x) {
-        BeerGlass beerGlass = new BeerGlass();
         assertEquals(x, beerGlass.getTotalCapacityInMilliters());
     }
 
@@ -43,8 +43,12 @@ public class StepDefs {
 
     @When("ゲストがエールををオーダーする")
     public void guest_orders_an_ale() {
-        BeerGlass beerGlass = bar.takeAGlassOfBeer();
-        assertNotNull(beerGlass);
+        beerGlass = bar.takeAGlassOfBeer();
+    }
+
+    @Then("bartender will serve an ale")
+    public void bartender_will_serve_an_ale() {
+        assertNotEquals(0, beerGlass.getRemainingBeerInMilliliters());
     }
 
 }
