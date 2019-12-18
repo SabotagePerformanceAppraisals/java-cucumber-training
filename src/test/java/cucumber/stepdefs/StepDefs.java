@@ -17,7 +17,7 @@ public class StepDefs {
     @Given("私達のバーでは{int}リットルの樽を使う")  // @Given("Our bar uses {int} liter kegs")
     public void our_bar_uses_x_liter_kegs(int x) {
         int expectedKegCapacityInMilliliters = x * 1000;
-        
+
         AleKeg keg = bar.getAleKeg();
         int actualKegCapacity = keg.totalCapacityInMilliliters();
         assertEquals(expectedKegCapacityInMilliliters, actualKegCapacity);
