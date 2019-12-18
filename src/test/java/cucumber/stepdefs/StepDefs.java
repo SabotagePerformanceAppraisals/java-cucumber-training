@@ -11,8 +11,8 @@ import static org.junit.Assert.*;
 
 
 public class StepDefs {
-    private static Bar bar = new Bar();
-    private static BeerGlass beerGlass = new BeerGlass();
+    private Bar bar = new Bar();
+    private BeerGlass beerGlass = new BeerGlass();
 
     @Given("私達のバーでは{int}リットルの樽を使う")  // @Given("Our bar uses {int} liter kegs")
     public void our_bar_uses_x_liter_kegs(int x) {
