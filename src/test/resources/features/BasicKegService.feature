@@ -7,20 +7,20 @@ Feature: 電子バーテンダーはビールの操作を可能である
     And 300MLのビールグラスを使う
 
   #Scenario: Guest wants an ale
-  　#Given バーテンダーは満タンの樽を持っている    // incorrect translation 翻訳が間違っています
+    #Given the bar has a full keg of ale
     #When guest orders an ale
     #Then bartender will serve an ale
   Scenario: ゲストはエールを飲みたがっている
-    Given the bar has a full keg of ale
+    Given バーにエールが満タンの樽がある
     When ゲストがエールををオーダーする
     Then バーテンダーはエールを提供する
 
   #Scenario Outline: Bar tracks ale inventory reduction
-   #Given バーは満タンの樽を持っている         // incorrect translation 翻訳が間違っています
+   #Given the bar has a full keg of ale
    #When guest orders <number> glasses of ale
    #Then keg will have <remaining> liters left
   Scenario Outline: バーはエールの在庫を減らす為に管理する
-    Given the bar has a full keg of ale
+    Given バーにエールが満タンの樽がある
     When お客様が <数> 杯のエールを注文する
     Then 樽には <残り> リットルが残っている
     Examples:
