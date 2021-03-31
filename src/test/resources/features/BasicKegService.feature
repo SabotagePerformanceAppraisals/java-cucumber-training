@@ -8,6 +8,11 @@ Feature: Electric bartender can work the beer kegs
     When guest orders an ale
     Then guest's beer glass has ale
 
+  Scenario: Guest wants another another ale
+    Given the bar has enough ale
+    When guest orders an ale
+    Then guest's beer glass has ale
+
   Scenario Outline: Bar tracks ale inventory reduction
     Given the bar has a full keg of ale
     When guest orders <number> glasses of ale

@@ -56,4 +56,9 @@ public class StepDefs {
         assertEquals(expectedBeerRemainingInMilliliters, keg.remainingBeerInMilliliters());
     }
 
+    @Given("the bar has enough ale")
+    public void theBarHasEnoughAle() {
+        bar.restockAle();
+        bar.getAleKeg();
+    }
 }
