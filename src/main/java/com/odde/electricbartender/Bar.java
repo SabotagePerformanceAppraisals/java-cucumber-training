@@ -25,7 +25,6 @@ public class Bar {
         beerGlasses = new ArrayList<BeerGlass>();
         for (int ii = 0; ii < 100 ; ii++)
             beerGlasses.add(new BeerGlass());
-        System.out.println("Dishes are clean.");
     }
 
     public BeerGlass takeAGlassOfBeer() {
