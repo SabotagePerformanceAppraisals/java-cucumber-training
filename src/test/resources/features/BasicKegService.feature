@@ -13,7 +13,7 @@ Feature: 電子バーテンダーはビールの操作を可能である
   Scenario: ゲストはエールを飲みたがっている
     Given バーにエールが満タンの樽がある
     When ゲストがエールををオーダーする
-    Then ゲストのビールグラスにエールが満タンになる
+    Then ゲストのビールグラスにエールが満タンである
 
   #Scenario Outline: Bar tracks ale inventory reduction
    #Given the bar has a full keg of ale
